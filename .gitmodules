@@ -1,0 +1,3 @@
+[submodule "document_templates"]
+	path = template
+	url = https://github.com/EAL-IT-Technology/document_templates.git
