@@ -1,5 +1,5 @@
 End-of-SS report
---------------------------
+=========================
 
 Each SS ends with a report hand-in. The report must document, that the student is able to:
 

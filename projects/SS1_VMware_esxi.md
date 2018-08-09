@@ -3,10 +3,9 @@ title: 'ITT3 SS special subjects'
 subtitle: 'SS1 VMware ESXi'
 main_author: 'Morten Nielsen'
 date: \today
-institution: Lillebealt Academy
 email: 'mon@eal.dk'
 left-header: \today
-right-header: Template test
+right-header: 'SS1 VMware ESXi'
 ---
 
 
