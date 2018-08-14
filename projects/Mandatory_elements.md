@@ -1,6 +1,8 @@
 Mandatory elements
 ==========================
 
+To help keep you on track, and to maintain an apropriate level of teacher contact, there are some mandatory elements.
+
 * All weeks will include presentations on class.
 
     This is a presentation with the class as *audience* and you must have decided in advance the *purpose* of the presentation
