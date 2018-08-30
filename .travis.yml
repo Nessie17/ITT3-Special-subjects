@@ -3,7 +3,11 @@ sudo: true
 install:
   - sudo apt-get update
   - sudo apt-get -y install make pandoc
-  - sudo apt-get -y install texlive-xetex texlive-latex-recommended texlive-fonts-recommended texlive-latex-extra
+  - sudo apt-get -y install \
+          texlive texlive-base texlive-binaries \
+          texlive-fonts-recommended texlive-latex-base texlive-latex-extra \
+          texlive-latex-recommended texlive-pictures texlive-plain-generic texlive-xetex
+
 
 script:
   - make
