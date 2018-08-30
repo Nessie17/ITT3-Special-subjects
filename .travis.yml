@@ -6,7 +6,7 @@ install:
   - sudo apt-get -y install
           texlive texlive-base texlive-binaries
           texlive-fonts-recommended texlive-latex-base texlive-latex-extra
-          texlive-latex-recommended texlive-pictures texlive-plain-generic texlive-xetex
+          texlive-latex-recommended texlive-pictures texlive-xetex
 
 
 script:
