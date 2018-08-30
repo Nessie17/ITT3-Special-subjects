@@ -2,8 +2,10 @@ sudo: true
 
 install:
   - sudo apt-get update
-  - sudo apt-get -y install make pandoc
-
+  - sudo apt-get -y install make pandoc texlive-xetex
 
 script:
   - make
+
+after_success:
+- .travis/push.sh
