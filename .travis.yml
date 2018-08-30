@@ -2,7 +2,7 @@ sudo: true
 
 install:
   - sudo apt-get update
-  - sudo apt-get -y install make pandoc texlive-xetex
+  - sudo apt-get -y install make pandoc texlive-xetex texlive-latex-recommended
 
 script:
   - make
