@@ -1,0 +1,9 @@
+sudo: true
+
+install:
+  - sudo apt-get updat
+  - sudo apt-get -y install make pandoc
+
+
+script:
+  - make
