@@ -7,7 +7,7 @@ SS1_VMware_esxi.pdf: projects/*.md weekly_plans/ww??.md template/template.tex
 	  --to           latex          \
 	  --template     template/template.tex   \
 	  --out          SS1_VMware_esxi.pdf \
-	  --latex-engine xelatex        \
+	  --pdf-engine xelatex        \
           --variable="skip-toc=false"   \
 	  projects/SS1_VMware_esxi.md  \
 		weekly_plans/ww_ss1_merged.md \
