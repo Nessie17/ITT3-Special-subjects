@@ -18,9 +18,7 @@ after_success:
 - git config --global user.email "travis@travis-ci.org"
 - git config --global user.name "Travis CI"
 
-- git checkout -b master
-- git add . *.pdf
+- git add *.pdf
 - git commit --message "Travis build"
 
-- git remote add origin-pages https://${GH_TOKEN}@github.com/EAL-IT-Technology/ITT3-Special-subjects.git
-- git push --set-upstream origin-pages master
+- git push
