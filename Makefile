@@ -7,6 +7,7 @@ SS1_VMware_esxi.pdf: projects/*.md weekly_plans/ww??.md template/template.tex
 	weekly_plans/merge_weeks.sh
 	@echo using timestamp $(GIT_DATE)
 	SOURCE_DATE_EPOCH=$(GIT_DATE)  \
+	SOURCE_DATE_EPOCH_TEX_PRIMITIVES=1 \
 	pandoc  \
 	  --from         markdown       \
 	  --to           latex          \
@@ -17,5 +18,6 @@ SS1_VMware_esxi.pdf: projects/*.md weekly_plans/ww??.md template/template.tex
 	  projects/Mandatory_elements.md  \
 	  projects/End-of-SS_report.md
 	SOURCE_DATE_EPOCH=$(GIT_DATE)  \
+	SOURCE_DATE_EPOCH_TEX_PRIMITIVES=1 \
 	xelatex SS1_VMware_esxi.tex
 
