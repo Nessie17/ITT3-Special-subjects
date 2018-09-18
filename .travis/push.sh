@@ -1,21 +1,23 @@
 #!/bin/sh
 
-setup_git() {
-  git config --global user.email "travis@travis-ci.org"
-  git config --global user.name "Travis CI"
-}
+TRAVIS_USERNAME="Travis CI"
+LAST_COMMITTER=`git log -1 --pretty=format:'%an'`
 
-commit_website_files() {
-  git checkout -b gh-pages
-  git add . *.html
-  git commit --message "Travis build: $TRAVIS_BUILD_NUMBER"
-}
+echo "Checking if '$LAST_COMMITTER' is '$TRAVIS_USERNAME'"
+if [ "$LAST_COMMITTER" = "$TRAVIS_USERNAME" ]; then
+	echo Travis user did last commit. Not pushing.
+	exit
+fi
 
-upload_files() {
-  git remote add origin-pages https://${GH_TOKEN}@github.com/EAL-IT-Technology/ITT3-Special-subjects.git > /dev/null 2>&1
-  git push --quiet --set-upstream origin-pages gh-pages
-}
+git config --global user.email "travis@travis-ci.org"
+git config --global user.name "$TRAVIS_USERNAME"
 
-setup_git
-commit_website_files
-upload_files
+git checkout -b travis-temp
+git add *.pdf
+git commit --message "Travis build"
+git checkout master
+git merge travis-temp
+
+git remote add origin-temp https://${GH_TOKEN}@github.com/EAL-IT-Technology/I$
+git push --set-upstream origin-temp
+
