@@ -1,2 +1,7 @@
 *_merged.md
 
+*.aux
+*.log
+*.out
+*.tex
+*.toc
