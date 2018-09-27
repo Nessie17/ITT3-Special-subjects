@@ -19,6 +19,8 @@ SS1_VMware_esxi.pdf: projects/*.md weekly_plans/ww??.md template/template.tex
 	  projects/End-of-SS_report.md
 	SOURCE_DATE_EPOCH=$(GIT_DATE)  \
 	SOURCE_DATE_EPOCH_TEX_PRIMITIVES=1 \
+	# rerun is needed
+	xelatex SS1_VMware_esxi.tex
 	xelatex SS1_VMware_esxi.tex
 
 SS2_AWS.pdf: projects/*.md weekly_plans/ww??.md template/template.tex
@@ -31,10 +33,12 @@ SS2_AWS.pdf: projects/*.md weekly_plans/ww??.md template/template.tex
 	  --to           latex          \
 	  --template     template/template.tex   \
 	  --out          SS2_AWS.tex \
-	  projects/SS1_VMware_esxi.md  \
+	  projects/SS2_AWS.md  \
 	  weekly_plans/ww_ss2_merged.md \
 	  projects/Mandatory_elements.md  \
 	  projects/End-of-SS_report.md
 	SOURCE_DATE_EPOCH=$(GIT_DATE)  \
 	SOURCE_DATE_EPOCH_TEX_PRIMITIVES=1 \
+	# rerun is needed
+	xelatex SS2_AWS.tex
 	xelatex SS2_AWS.tex
