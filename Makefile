@@ -42,3 +42,35 @@ SS2_AWS.pdf: projects/*.md weekly_plans/ww??.md template/template.tex
 	# rerun is needed
 	xelatex SS2_AWS.tex
 	xelatex SS2_AWS.tex
+
+local: SS1_VMware_esxi.pdf-local SS2_AWS.pdf-local
+
+SS1_VMware_esxi.pdf-local: projects/*.md weekly_plans/ww??.md template/template.tex
+	weekly_plans/merge_weeks_ss1.sh
+	@echo using timestamp $(GIT_DATE)
+	SOURCE_DATE_EPOCH=$(GIT_DATE)  \
+	pandoc  \
+	  --from         markdown       \
+	  --to           latex          \
+	  --template     template/template.tex   \
+	  --out          SS1_VMware_esxi.pdf \
+	  --pdf-engine pdflatex \
+	  projects/SS1_VMware_esxi.md  \
+	  weekly_plans/ww_ss1_merged.md \
+	  projects/Mandatory_elements.md  \
+	  projects/End-of-SS_report.md
+
+SS2_AWS.pdf-local: projects/*.md weekly_plans/ww??.md template/template.tex
+	weekly_plans/merge_weeks_ss2.sh
+	@echo using timestamp $(GIT_DATE)
+	SOURCE_DATE_EPOCH=$(GIT_DATE)  \
+	pandoc  \
+	  --from         markdown       \
+	  --to           latex          \
+	  --template     template/template.tex   \
+	  --out          SS2_AWS.pdf \
+	  --pdf-engine pdflatex \
+	  projects/SS2_AWS.md  \
+	  weekly_plans/ww_ss2_merged.md \
+	  projects/Mandatory_elements.md  \
+	  projects/End-of-SS_report.md
