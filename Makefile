@@ -20,8 +20,8 @@ SS1_VMware_esxi.pdf: projects/*.md weekly_plans/ww??.md template/template.tex
 	SOURCE_DATE_EPOCH=$(GIT_DATE)  \
 	SOURCE_DATE_EPOCH_TEX_PRIMITIVES=1 \
 	# rerun is needed
-	xelatex SS1_VMware_esxi.tex
-	xelatex SS1_VMware_esxi.tex
+	pdflatex SS1_VMware_esxi.tex
+	pdflatex SS1_VMware_esxi.tex
 
 SS2_AWS.pdf: projects/*.md weekly_plans/ww??.md template/template.tex
 	weekly_plans/merge_weeks_ss2.sh
@@ -40,8 +40,8 @@ SS2_AWS.pdf: projects/*.md weekly_plans/ww??.md template/template.tex
 	SOURCE_DATE_EPOCH=$(GIT_DATE)  \
 	SOURCE_DATE_EPOCH_TEX_PRIMITIVES=1 \
 	# rerun is needed
-	xelatex SS2_AWS.tex
-	xelatex SS2_AWS.tex
+	pdflatex SS2_AWS.tex
+	pdflatex SS2_AWS.tex
 
 local: \
 	SS1_VMware_esxi.pdf-local \
