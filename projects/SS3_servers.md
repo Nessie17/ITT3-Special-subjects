@@ -30,7 +30,7 @@ We have 4 subnets
 * `DMZ` - for servers which may be accessed directly from the Internet
 * `USR LAN` - for user workstations
 * `SRV LAN` - for intenal servers
-* `INFRA_MGNT` - non-rputable subnet for configuring the infastructure devices, ie. the two routers
+* `INFRA_MGNT` - non-routable subnet for configuring the infastructure devices, ie. the two routers
 
 We have lots of servers
 
